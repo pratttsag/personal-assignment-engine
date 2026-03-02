@@ -2,32 +2,92 @@
 <html>
 <head>
   <title>Personal Automation Engine</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .rule-item {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .log {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Personal Automation Engine App</h1>
+<h1>Personal Automation Engine</h1>
 
-<div>
+<div class="card">
   <input type="text" id="ruleName" placeholder="Rule Name">
 
   <select id="triggerType">
     <option value="time">Time Trigger</option>
-    <option value="battery">Battery Trigger</option>
+    <option value="click">Button Click</option>
     <option value="manual">Manual Trigger</option>
+  </select>
+
+  <select id="conditionType">
+    <option value="none">No Condition</option>
+    <option value="morning">Only Morning</option>
+    <option value="evening">Only Evening</option>
   </select>
 
   <select id="actionType">
     <option value="alert">Show Alert</option>
-    <option value="log">Log Message</option>
+    <option value="console">Log to Console</option>
+    <option value="background">Change Background</option>
   </select>
 
   <button onclick="addRule()">Add Rule</button>
 </div>
 
-<h2>Rules</h2>
-<ul id="ruleList"></ul>
+<div class="card">
+  <h3>Rules</h3>
+  <div id="rulesList"></div>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
