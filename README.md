@@ -1,25 +1,38 @@
+# Personal Automation Engine App
+
+This project is a simple Personal Automation Engine that allows users to create and manage automation rules using triggers and actions.
 
 ---
 
-## ▶️ How to Run the Project
-
-1. Clone or download the repository
-2. Open `index.html` in a web browser
-3. Create automation rules
-4. Execute rules using the Run button
-
----
-
-## ✨ Optional Enhancements
-
-- Rule execution logs
-- Rule priority
-- JSON import/export
-- Condition-based execution
+## 🚀 Features
+- Create and delete automation rules
+- Supports multiple triggers (Manual, Time, Battery)
+- Supports actions (Alert, Log message)
+- Rule execution engine
+- Local storage using browser LocalStorage
 
 ---
 
-## 👩‍💻 Author
+## ⚙️ Triggers
+- Manual Trigger
+- Time Trigger (simulated)
+- Battery Trigger (simulated)
 
-Your Name  
-GDG on Campus Assignment
+---
+
+## 🔔 Actions
+- Show alert message
+- Log message in console
+
+---
+
+## 🧠 Architecture
+The project is divided into three main layers:
+- UI Layer (index.html)
+- Logic Layer (script.js)
+- Storage Layer (LocalStorage)
+
+---
+
+## 📁 Project Structure
+
